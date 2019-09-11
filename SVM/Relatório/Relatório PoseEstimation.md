@@ -13,8 +13,9 @@ meios abaixo:
 * Leonardo Queiroz, aluno de bacharelado em engenharia mecânica na Universidade Federal do Rio Grande do Norte, contato em:
 - [Github](https://github.com/leocqueiroz)
 
-* Gabriel Pepsi, contato:
-- [Github](https://theuselessweb.com/)
+* Gabriel Varela, aluno da Universidade Federal do Rio Grande do Norte do curso de bacharelado em engenharia mecatrônica. Contato em:
+- [Github](https://github.com/gabrielvrl)
+- [Site](https://gabrielvrl.github.io/)
 
 ### Problema
 O problema consiste em analisar a imagem de uma pessoa, onde será possível identificar a posição a qual ela está. Há duas posições, sentado e em pé. O programa irá identificar partes predeterminadas do corpo da pessoa e, por meio de um plano bidimensional irá identificar o posicionamento de cada parte. Partes como pé, olho, mão, etc. Identificando corretamente cada posição, faz-se possível estimar o posicionamento da pessoa. 
@@ -56,5 +57,31 @@ Com o treino realizado, é feito uma predição utilizando a biblioteca do sciki
 ## Experimentos 
 Para a realização do teste foram utilizadas 38 imagens, as quais foram analisadas e codificadas para identificar as coordenadas de cada parte do corpo. O rastreamento de cada parte do corpo se dá por meio de um ponto determinado de acordo com os parâmetros mencionados anteriormente.
 A execução do algoritmo resulta em duas classes já mencionadas, em pé e sentado. Pelo gráfico abaixo mostrado é possível perceber que o código identificou e classificou cada posicionamento de forma coerente, além de os dividir corretamente em dois grupos distintos.
+Para visualizar o gráfico de resultados do treinamento, foi utilizado o seguinte código:
+```py
+# Visualising the Training set results
+from matplotlib.colors import ListedColormap
+X_set, y_set = X_train, y_train
 
+X1, X2 = np.meshgrid(np.arange(start = X_set[:, 0].min() - 1, stop = X_set[:, 0].max() + 1, step = 0.01),
+                     np.arange(start = X_set[:, 1].min() - 1, stop = X_set[:, 1].max() + 1, step = 0.01))
+Xpred = np.array([X1.ravel(), X2.ravel()] + [np.repeat(0, X1.ravel().size) for _ in range(22)]).T
+# Xpred now has a grid for x1 and x2 and average value (0) for x3 through x13
+pred = classifier.predict(Xpred).reshape(X1.shape)   # is a matrix of 0's and 1's !
+plt.contourf(X1, X2, pred,
+             alpha = 0.75, cmap = ListedColormap(('red', 'green')))
+
+
+classe = ['cima','baixo']
+plt.xlim(X1.min(), X1.max())
+plt.ylim(X2.min(), X2.max())
+for i, j in enumerate(np.unique(y_set)):
+    plt.scatter(X_set[y_set == j, 0], X_set[y_set == j, 1],
+                c = ListedColormap(('red', 'green'))(i), label = classe[j])
+plt.title('SVM (Training set)')
+plt.xlabel('Position')
+plt.ylabel('Classe')
+plt.legend()
+plt.show()
+```
 ![Grafico](https://github.com/leocqueiroz/MachineLearning/blob/master/SVM/Imagens/Grafico.PNG)
