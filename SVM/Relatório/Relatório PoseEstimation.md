@@ -1,0 +1,59 @@
+# Identificador de posições
+
+## Introdução
+O Support Vector Machine (SVM) é um conceito utilizado em Machine Learning para identificar padrões em dados e tentar separá-los de acordo com suas classificações. O objetivo dsse trabalho é utilizar um programa de SVM para analisar o posicionamento de uma pessoa por meio de imagens.
+
+### Contribuidores
+
+* Samuel Amico Fidelis, aluno da Universidade Federal do Rio Grande do Norte do curso de bacharelado em engenharia mecatrônica. Para eventuais dúvidas, entrar em contato pelos
+meios abaixo:
+[Github](https://github.com/samuelamico/MachineLearning)
+[Site](https://samuelamico.github.io/)
+
+* Leonardo Queiroz, aluno de bacharelado em engenharia mecânica na Universidade Federal do Rio Grande do Norte, contato em:
+[e-mail](leocamaraq@gmail.com)
+
+* Gabriel Pepsi
+
+### Problema
+O problema consiste em analisar a imagem de uma pessoa, onde será possível identificar a posição a qual ela está. Há duas posições, sentado e em pé. O programa irá identificar partes predeterminadas do corpo da pessoa e, por meio de um plano bidimensional irá identificar o posicionamento de cada parte. Partes como pé, olho, mão, etc. Identificando corretamente cada posição, faz-se possível estimar o posicionamento da pessoa. 
+
+### Base de Dados
+A base de dados é gerada pelo usuário, quando este seleciona a opção de Salvar Classe. A função de salvar() fica responsável de passar as posições x,y de cada ponto em ordem escolhida pelo usuário e com a devida classe que esse escolheu armazenar. Neste caso a classe é escolhida pelo teclado, onde por exemplo 'b' significa salvar na classe posição baixo.
+O arquivo Dados.txt armazena os dados enviados pela função no formato que segue na imagem baixo.
+
+![FuncaoSalvarTXT](https://github.com/samuelamico/MachineLearning/blob/master/Graficos/SalvarTabelaPoseEstimation.png)
+
+## Metodologia 
+
+### Modelo de Machine Learning UtilizadoO Machine Learning (ML) utilizado foi o SVM, o qual analisa os dados fornecidos pelo usuário e os separa em duas categorias diferentes, a partir de padrões identificados pelo próprio programa, ou seja, o SVM é um classificador binário não probabilístico. O SVM tende à encontrar uma separação dos dados por meio de uma curva a qual tende à maximizar a
+distância entre os pontos mais próximos em relação à cada categoria. De forma resumida, o SVM classifica os dados entre duas configurações distintas e os separa por meio de uma maximização de distância dos pontos para cada categoria.
+
+### Atributos escolhidos
+Para realizar a simulação desenvolvida no programa, foram utilizados ao total 12 parâmetros, o qual cada um se refere à um ponto predeterminado para uma parte do corpo da pessoa na imagem. Dentre esses parâmetros, estão:
+```
+1° - Mão direita
+2° - Cotovelo direito
+3° - Peito
+4° - Cotovelo esquerdo
+5° - Mão esquerda
+6° - Barriga
+7° - Joelho direito
+8° - Pé direito
+9° - Joelho esquerdo
+10° - Pé esquerdo
+11° - Coxa direita
+12° - Coxa esquerda
+```
+### Etapas do treinamento
+Inicialmente foi dividido os dados fornecidos entre treino e teste e, para isso, foi utilizado um percentual de 75% para treino e os demais 25% para teste.
+Após a separação, é utilizado um método de feature scaling para normalizar a distância das variáveis independentes, utilizando a biblioteca sickit-learn. Em seguida é feito um fitting para adequar os dados da fase de treino.
+
+### Etapas do teste
+Com o treino realizado, é feito uma predição utilizando a biblioteca do scikit-learn para simular os resultados dos dados de teste. Com o treino realizado, é feita a matriz de confusão a qual será responsável para a visualização do desempenho do algoritmo.
+
+## Experimentos 
+Para a realização do teste foram utilizadas 38 imagens, as quais foram analisadas e codificadas para identificar as coordenadas de cada parte do corpo. O rastreamento de cada parte do corpo se dá por meio de um ponto determinado de acordo com os parâmetros mencionados anteriormente.
+A execução do algoritmo resulta em duas classes já mencionadas, em pé e sentado. Pelo gráfico abaixo mostrado é possível perceber que o código identificou e classificou cada posicionamento de forma coerente, além de os dividir corretamente em dois grupos distintos.
+
+![Histograma](https://github.com/leocqueiroz/MachineLearning/SVM/Imagens/Grafico.png)
