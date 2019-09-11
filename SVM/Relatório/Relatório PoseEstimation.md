@@ -87,3 +87,5 @@ plt.show()
 Pelo gráfico abaixo mostrado é possível perceber que o código identificou e classificou cada posicionamento de forma coerente, além de os dividir corretamente em dois grupos distintos.
 
 ![Grafico](https://github.com/leocqueiroz/MachineLearning/blob/master/SVM/Imagens/Grafico.PNG)
+
+Portanto, com o algorítmo realizado, foi possível separar e classificar cada uma das posições esperadas de acordo com a imagem corretamente, ou seja, o resultado esperado coincidiu com o obtido.
