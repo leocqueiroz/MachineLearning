@@ -11,10 +11,10 @@ meios abaixo:
 - [Site](https://samuelamico.github.io/)
 
 * Leonardo Queiroz, aluno de bacharelado em engenharia mecânica na Universidade Federal do Rio Grande do Norte, contato em:
-- [e-mail](leocamaraq@gmail.com)
-- [github](https://github.com/leocqueiroz)
+- [Github](https://github.com/leocqueiroz)
 
-* Gabriel Pepsi
+* Gabriel Pepsi, contato:
+- [Github](https://theuselessweb.com/)
 
 ### Problema
 O problema consiste em analisar a imagem de uma pessoa, onde será possível identificar a posição a qual ela está. Há duas posições, sentado e em pé. O programa irá identificar partes predeterminadas do corpo da pessoa e, por meio de um plano bidimensional irá identificar o posicionamento de cada parte. Partes como pé, olho, mão, etc. Identificando corretamente cada posição, faz-se possível estimar o posicionamento da pessoa. 
