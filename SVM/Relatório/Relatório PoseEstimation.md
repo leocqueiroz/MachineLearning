@@ -56,7 +56,7 @@ Com o treino realizado, é feito uma predição utilizando a biblioteca do sciki
 
 ## Experimentos 
 Para a realização do teste foram utilizadas 38 imagens, as quais foram analisadas e codificadas para identificar as coordenadas de cada parte do corpo. O rastreamento de cada parte do corpo se dá por meio de um ponto determinado de acordo com os parâmetros mencionados anteriormente.
-A execução do algoritmo resulta em duas classes já mencionadas, em pé e sentado. Pelo gráfico abaixo mostrado é possível perceber que o código identificou e classificou cada posicionamento de forma coerente, além de os dividir corretamente em dois grupos distintos.
+A execução do algoritmo resulta em duas classes já mencionadas, em pé e sentado. 
 Para visualizar o gráfico de resultados do treinamento, foi utilizado o seguinte código:
 ```py
 # Visualising the Training set results
@@ -84,4 +84,6 @@ plt.ylabel('Classe')
 plt.legend()
 plt.show()
 ```
+Pelo gráfico abaixo mostrado é possível perceber que o código identificou e classificou cada posicionamento de forma coerente, além de os dividir corretamente em dois grupos distintos.
+
 ![Grafico](https://github.com/leocqueiroz/MachineLearning/blob/master/SVM/Imagens/Grafico.PNG)
