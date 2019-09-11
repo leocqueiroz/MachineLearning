@@ -7,11 +7,12 @@ O Support Vector Machine (SVM) é um conceito utilizado em Machine Learning para
 
 * Samuel Amico Fidelis, aluno da Universidade Federal do Rio Grande do Norte do curso de bacharelado em engenharia mecatrônica. Para eventuais dúvidas, entrar em contato pelos
 meios abaixo:
-[Github](https://github.com/samuelamico/MachineLearning)
-[Site](https://samuelamico.github.io/)
+- [Github](https://github.com/samuelamico/MachineLearning)
+- [Site](https://samuelamico.github.io/)
 
 * Leonardo Queiroz, aluno de bacharelado em engenharia mecânica na Universidade Federal do Rio Grande do Norte, contato em:
-[e-mail](leocamaraq@gmail.com)
+- [e-mail](leocamaraq@gmail.com)
+- [github](https://github.com/leocqueiroz)
 
 * Gabriel Pepsi
 
@@ -26,7 +27,7 @@ O arquivo Dados.txt armazena os dados enviados pela função no formato que segu
 
 ## Metodologia 
 
-### Modelo de Machine Learning UtilizadoO Machine Learning (ML) utilizado foi o SVM, o qual analisa os dados fornecidos pelo usuário e os separa em duas categorias diferentes, a partir de padrões identificados pelo próprio programa, ou seja, o SVM é um classificador binário não probabilístico. O SVM tende à encontrar uma separação dos dados por meio de uma curva a qual tende à maximizar a
+Modelo de Machine Learning UtilizadoO Machine Learning (ML) utilizado foi o SVM, o qual analisa os dados fornecidos pelo usuário e os separa em duas categorias diferentes, a partir de padrões identificados pelo próprio programa, ou seja, o SVM é um classificador binário não probabilístico. O SVM tende à encontrar uma separação dos dados por meio de uma curva a qual tende à maximizar a
 distância entre os pontos mais próximos em relação à cada categoria. De forma resumida, o SVM classifica os dados entre duas configurações distintas e os separa por meio de uma maximização de distância dos pontos para cada categoria.
 
 ### Atributos escolhidos
@@ -56,4 +57,4 @@ Com o treino realizado, é feito uma predição utilizando a biblioteca do sciki
 Para a realização do teste foram utilizadas 38 imagens, as quais foram analisadas e codificadas para identificar as coordenadas de cada parte do corpo. O rastreamento de cada parte do corpo se dá por meio de um ponto determinado de acordo com os parâmetros mencionados anteriormente.
 A execução do algoritmo resulta em duas classes já mencionadas, em pé e sentado. Pelo gráfico abaixo mostrado é possível perceber que o código identificou e classificou cada posicionamento de forma coerente, além de os dividir corretamente em dois grupos distintos.
 
-![Histograma](https://github.com/leocqueiroz/MachineLearning/SVM/Imagens/Grafico.png)
+![Grafico](https://github.com/leocqueiroz/MachineLearning/blob/master/SVM/Imagens/Grafico.PNG)
