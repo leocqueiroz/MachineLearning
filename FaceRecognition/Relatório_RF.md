@@ -204,10 +204,10 @@ plt.show()
 ## Resultados
 As imagens abaixo mostram o reconhecimento do rosto treinado, e identifica os demais como rostos desconhecidos.
 
-![foto1] (https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto1.PNG)
+![foto1](https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto1.PNG)
 
-![foto2] (https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto2.PNG)
+![foto2](https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto2.PNG)
 
-![foto3] (https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto3.PNG)
+![foto3](https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto3.PNG)
 
-![foto4] (https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto4.PNG)
+![foto4](https://github.com/leocqueiroz/MachineLearning/blob/master/FaceRecognition/Fotos/foto4.PNG)
